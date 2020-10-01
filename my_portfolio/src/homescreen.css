@@ -1,0 +1,22 @@
+body {
+    height: 100%;
+}
+.home_layout {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: rgb(240, 216, 186);
+}
+.home_left_layout {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(52, 71, 71);
+    color: aliceblue;
+
+}
+.my_picture{
+
+}
+.home_right_layout {
+
+}
