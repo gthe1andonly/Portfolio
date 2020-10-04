@@ -1,5 +1,5 @@
 import React from 'react';
-import './homescreen.css';
+import '../homescreen.css';
 // import '../node_modules/font-awesome/css/font-awesome.min.css';
 // import tiley from './rileysRumble.jpg';
 
