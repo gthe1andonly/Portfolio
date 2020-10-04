@@ -1,10 +1,4 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
-import './App.css';
-import HomeScreen from './HomeScreen';
-import testscreen from './testscreen';
-import Projects from './screens/Projects';
-
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -27,8 +21,9 @@ import MailIcon from '@material-ui/icons/Mail';
 
 
 
-function App() {
-  const drawerWidth = 240;
+function TestScreen() {
+  
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -97,14 +92,10 @@ const useStyles = makeStyles((theme) => ({
     const handleDrawerClose = () => {
     setOpen(false);
   };
-
-
   
   return (
-    <BrowserRouter>
-    <div className="grid-container">
-
-    <CssBaseline />
+    <div>
+        <CssBaseline />
       <AppBar
         position="fixed"
         className={clsx(classes.appBar, {
@@ -142,26 +133,16 @@ const useStyles = makeStyles((theme) => ({
         <Divider />
         <List>
             <div>[<WorkIcon/><button className='navButtons'>Experience</button></div>
-            <div><EmojiObjectsIcon/><button className='navButtons'><Link to='/projects'>Projects</Link></button></div>
+            <div><EmojiObjectsIcon/><button className='navButtons'>Experience</button></div>
             <div><CastForEducationIcon/><button className='navButtons'>Education</button></div>
             <div><FaceIcon/><button className='navButtons'>Other Stuff About Me</button></div> 
             <div><MailIcon/><button className='navButtons'>Send email</button></div>
         </List>
         
       </Drawer>
-
-    <header id="header">     
-        </header>
-        <main className="main">
-        <div className="content">
-        <Route path="/" exact={true} component={HomeScreen}/>
-        <Route path="/test" exact={true} component={testscreen}/>
-        <Route path="/projects" exact={true} component={Projects}/>
-        </div>
-        </main>
-
+      
     </div>
-    </BrowserRouter>
   );
 }
-export default App;
+
+export default TestScreen;
